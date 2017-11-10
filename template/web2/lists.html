@@ -1,0 +1,62 @@
+<!--header start-->
+<include file="./template/web/header.html"/>
+<!--header end-->
+<div id="mainbody">
+  <div class="blogs">
+    <div class="newlist">
+      <h2>
+        <span>
+          <!--<a href="/jstt/div/">div+css</a>-->
+          <!--<a href="/jstt/bj/">心得笔记</a>-->
+          <!--<a href="/jstt/asp/">ASP</a>-->
+          <!--<a href="http://www.ip3q.com/">IP查询</a>-->
+          <!--<a href="/news/jsex/">JS经典实例</a>-->
+          <!--<a href="/jstt/html5/">html5资讯</a>-->
+          </span>您当前的位置：<a href="{{__ROOT__}}">首页</a>&nbsp;>&nbsp;<a href="/c_{{$model['cid']}}.html">{{$model['catname']}}</a></h2>
+     <ul>
+<arc>
+<p class="ptit">
+  <b><a href="{{$field['url']}}" target="_blank" title="{{$field['title']}}">{{$field['title']}}</a></b>
+</p>
+<p class="ptime">发布时间：{{substr($field['created_at'],0,10)}} 作者：{{$field['author']}}</p>
+<a href="{{$field['url']}}" target="_blank" title="{{$field['title']}}"><img src="{{$field['thumb']}}" class="imgdow" alt="{{$field['url']}}"></a> <p class="pcon">{{$field['title']}}<a href="{{$field['url']}}" target="_blank" title="{{$field['title']}}">详细信息</a></P>
+<div class="line"></div>
+</arc>
+
+
+
+  </ul>
+<div class="page">
+
+</div>
+</div>
+
+    <!--bloglist end-->
+    <aside>
+      <!--searchform-->
+      <include file="./template/web/searchform.html"/>
+      <!--searchform end-->
+
+      <!--right_nav-->
+      <include file="./template/web/right_nav.html"/>
+      <!--right_nav end-->
+      <div class="tuijian">
+        <h2>栏目更新</h2>
+        <ol>
+          <li><span><strong>1</strong></span><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+
+        </ol>
+      </div>
+
+      <!--hot clicks-->
+      <include file="./template/web/hot_click.html"/>
+      <!--hot clicks end-->
+    </aside>
+  </div>
+  <!--blogs end--> 
+</div>
+<!--mainbody end-->
+
+<!--footer start-->
+<include file="./template/web/footer.html"/>
+<!--footer end-->

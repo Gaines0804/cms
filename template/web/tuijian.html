@@ -1,0 +1,37 @@
+
+    <div class="banner-wrapper">
+        <p class="suiji">
+            <i class="icons icon-article"></i>
+            <span>推荐文章</span>
+        </p>
+    </div>
+
+    <!--推荐文章-->
+    <div class="tuijian">
+        <ul class="tj">
+            <randoms>
+                <li>
+                    <i class="icons icon-book"></i>
+                    <a href="{{$field['url']}}" target="_blank" title="{{$field['title']}}">
+                        {{mb_substr($field['title'],0,12,'utf-8')}}...
+                    </a>
+                    <p>
+                        <span>
+                            <i class="icons icon-user"></i>
+                            {{$field['author']}}
+                        </span>
+                        <span>
+                            <i class="icons icon-clock"></i>
+                            {{substr($field['created_at'],0,10)}}
+                        </span>
+                        <span>
+                            <i class="icons icon-eye"></i>
+                            {{$field['click']}}
+                        </span>
+                    </p>
+                </li>
+            </randoms>
+        </ul>
+
+    </div>
+

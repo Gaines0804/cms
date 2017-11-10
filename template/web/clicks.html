@@ -1,0 +1,26 @@
+<div class="sidebar-box white ">
+    <h3>点击排行</h3>
+    <ul class="upcoming-events">
+
+        <!-- Event -->
+        <hot_clicks rows="6">
+            <li>
+                <div class="date">
+                    <span>
+                        <span class="day">{{substr($field['arc_at'],8,2)}}</span>
+                        <span class="month">{{substr($field['arc_at'],6,1)}}月</span>
+                    </span>
+                </div>
+
+                <div class="event-content">
+                    <h6><a href="{{$field['a_url']}}" title="">{{mb_substr($field['title'],0,10)}}</a></h6>
+                    <ul class="event-meta">
+                        <li><i class="icons icon-clock"></i> {{$field['arc_at']}}</li>
+                        <li><i class="icons icon-eye"></i> {{$field['click']}}</li>
+                    </ul>
+                </div>
+            </li>
+        </hot_clicks>
+        <!-- /Event -->
+    </ul>
+</div>

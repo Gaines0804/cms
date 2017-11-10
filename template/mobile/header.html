@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073) -->
+<html class=" js csstransforms3d csstransitions">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
+    <title>Gaines'技术博客</title>
+    <link href="{{__TEMPLATE__}}/css/style.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/framework.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/menu.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/swipebox.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/animate.css" rel="stylesheet" type="text/css">
+    <script async="" src="{{__TEMPLATE__}}/js/analytics.js"></script>
+    <script src="{{__TEMPLATE__}}/js/glovebox.js"></script>
+    <script type="text/javascript" src="{{__TEMPLATE__}}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{__TEMPLATE__}}/js/jqueryui.js"></script>
+    <script type="text/javascript" src="{{__TEMPLATE__}}/js/framework.plugins.js"></script>
+    <script type="text/javascript" src="{{__TEMPLATE__}}/js/custom.js"></script>
+</head>
+<body>
+<div class="all-elements">
+    <div id="perspective" class="perspective effect-airbnb"><!--this houses the entire page, and creates the effect-->
+        <div class="header">
+            <a href="" id="showMenu"><i class="fa fa-navicon"></i></a>
+            <a href="{{__ROOT__}}" id="pageLogo" style="text-align: center;font-size: 20px;line-height: 60px;color: #ff8448;">Gaines'技术博客</a>
+            <!--<a href="" id="openMail"><i class="fa fa-envelope-o"></i></a>-->
+        </div>
+        <div class="outer-nav">
+            <div class="inner-nav">
+                <div class="nav-item">
+                    <a href="{{__ROOT__}}" class="active-item">
+                        <i class="nav-icon fa fa-home"></i>
+                        首页
+                    </a>
+                </div>
+                <category pid="0" rows="6">
+                    <div class="nav-item">
+                        <a href="" class="deploy-nav-sub-item">
+                            <i class="nav-icon fa fa-tags"></i>
+                            {{$field['catname']}}
+                        </a>
+                        <div class="nav-sub-item">
+                            <category pid='{$field["cid"]}'>
+                                <a href="{{$field['url']}}">{{$field['catname']}}</a>
+                            </category>
+                        </div>
+                    </div>
+                </category>
+                <div class="nav-item">
+                    <a href="" class="deploy-nav-sub-item">
+                        <i class="nav-icon fa fa-link"></i>
+                        友情链接
+                    </a>
+                    <div class="nav-sub-item">
+                        <tag action="links.lists" rows="5">
+                            <a href="{{$field['url']}}" target="_blank">{{$field['lname']}}</a>
+                        </tag>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a id="closeMenu" href="">
+                        <i class="nav-icon fa fa-times"></i>
+                        关闭
+                    </a>
+                </div>
+            </div>
+        </div>

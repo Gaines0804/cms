@@ -1,0 +1,9 @@
+{
+    "csrf_token": "",
+    "name": "search",
+    "title": "搜索",
+    "resume": "关键词搜索",
+    "sql": "create table search_keywords(\r\n\tkid tinyint primary key auto_increment,\r\n\tkeywords varchar(100) not null,\r\n\ttimes tinyint not null default 0\r\n)",
+    "author": "hd",
+    "preview": "attachment/2017/07/25/36941500963020.jpg"
+}

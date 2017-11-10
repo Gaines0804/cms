@@ -1,0 +1,94 @@
+<!--header start-->
+<include file="./template/web/header.html"/>
+<!--header end-->
+<div id="mainbody">
+    <div class="info">
+        <!--轮播图-->
+        <!--注意：直接向下面的div中遍历输出a标签即可，小圆点会根据a标签的数量自动创建，边界条件会自动判断。-->
+        <div id="flash" class="info" style="width: 620px;height: 250px;float: left;">
+            <slide>
+                <a href="{{$field['url']}}" style="width: 620px;height: 250px"><img src="{{$field['thumb']}}"/></a>
+            </slide>
+            <ul></ul>
+        </div>
+        <!--轮播图结束-->
+
+        <div class="card">
+            <h2>我的名片</h2>
+            <p>网名：Gaines | 杨利超</p>
+            <p>职业：Web前端、微信、PHP开发</p>
+            <p>电话：15687373046</p>
+            <p>Email：862574133@qq.com</p>
+            <p>公众号：gaines0804</p>
+        </div>
+    </div>
+    <!--info end-->
+    <div class="blank"></div>
+    <div class="blogs">
+        <ul class="bloglist">
+            <arc rows="4">
+                <li>
+                    <div class="arrow_box">
+                        <div class="ti"></div>
+                        <!--三角形-->
+                        <div class="ci"></div>
+                        <!--圆形-->
+                        <h2 class="title"><a href="{{$field['url']}}" target="_blank">{{$field['title']}}</a></h2>
+                        <ul class="textinfo">
+                            <a href="{{$field['url']}}"><img src="{{$field['thumb']}}"/></a>
+                            <p>{{$field['description']}}</p>
+                        </ul>
+                        <ul class="details">
+                            <li class="likes">{{$field['click']}}</li>
+                            <li class="icon-time">{{substr($field['created_at'],0,10)}}</li>
+                        </ul>
+                    </div>
+                    <!--arrow_box end-->
+                </li>
+            </arc>
+        </ul>
+        <!--bloglist end-->
+        <aside>
+
+            <!--searchform-->
+            <include file="./template/web/searchform.html"/>
+            <!--searchform end-->
+
+            <div class="tuijian">
+                <h2>推荐文章</h2>
+                <ol>
+                    <arc commend="1" rows="8">
+                        <li><span><strong>{{$field['num']}}</strong></span><a href="{{$field['url']}}">{{$field['title']}}</a>
+                        </li>
+                    </arc>
+                </ol>
+            </div>
+
+
+            <!--hot clicks-->
+            <include file="./template/web/hot_click.html"/>
+            <!--hot clicks end-->
+
+
+            <div class="viny">
+                <dl>
+                    <dt class="art" style="width: 120px;"><img src="{{__TEMPLATE__}}/images/artwork.png" alt="专辑"></dt>
+                    <dd class="icon-song"><span></span>歌名：Halo</dd>
+                    <dd class="icon-artist"><span></span>歌手：Beyoncé (碧昂丝)</dd>
+                    <dd class="icon-album"><span></span>A Gift From A Virgo</dd>
+                    <dd class="icon-like"><span></span><a href="">喜欢</a></dd>
+                    <dd class="music">
+                        <audio src="{{__TEMPLATE__}}/images/Beyonce - Halo.mp3" controls></audio>
+                    </dd>
+                    <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
+                </dl>
+            </div>
+        </aside>
+    </div>
+    <!--blogs end-->
+</div>
+<!--mainbody end-->
+
+<!--footer start-->
+<include file="./template/web/footer.html"/>
+<!--footer end-->

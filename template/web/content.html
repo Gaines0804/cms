@@ -1,0 +1,103 @@
+﻿<include file="./template/web/header.html"/>
+
+<section id="content">
+			
+			<!-- Page Heading -->
+			<section class="section page-heading ">
+				
+
+				<p class="breadcrumb"><a href="{{__ROOT__}}">首页</a> / <a href="{{__ROOT__}}/c_{{$hdData['cid']}}.html">{{$hdData['catname']}}</a> / {{$hdData['title']}}</p>
+				
+			</section>
+			<!-- Page Heading -->
+			
+
+			
+			<!-- Section -->
+			<section class="section full-width-bg gray-bg">
+				
+				<div class="row">
+				
+					<div class="col-lg-9 col-md-9 col-sm-8">
+						
+						<!-- Single Blog Post -->
+						<div class="blog-post-single">
+							
+							<div class="post-meta ">
+								<h2 class="text-center">{{$hdData['title']}}</h2>
+								<p class="text-center">
+									<span>作者：{{$hdData['author']}}</span>
+									<span><i class="icons icon-clock"></i>{{$hdData['created_at']}}</span>
+									<span><i class="icons icon-eye"></i>{{$hdData['click']}}</span>
+								</p>
+
+							</div>
+							
+							<div class="post-content">
+								{{$hdData['content']}}
+							</div>
+
+							
+							<!-- Pagination -->
+							<div class="row ">
+								
+								<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">
+									<span>上一篇：&nbsp;<prev/></span>
+								</div>
+								
+								<div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">
+									<span>下一篇：&nbsp;<next/></span>
+								</div>
+								
+							</div>
+							<!-- /Pagination -->
+							
+
+							
+						</div>	
+						<!-- /Single Blog Post -->	
+							
+							
+						<!-- other Articles -->
+						<include file="./template/web/other_arc.html"/>
+						<!-- /other Articles -->
+
+						<!--畅言-->
+						<div id="SOHUCS" sid="{{__URL__}}"></div>
+						<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+						<script type="text/javascript">
+                            window.changyan.api.config({
+                                appid: 'cyt8zjbQz',
+                                conf: 'prod_6245fd8903d495b377e8cd4beac2c185'
+                            });
+						</script>
+						<!--畅言-->
+					</div>
+
+
+
+					<!--右侧模块-->
+					<div class="col-lg-3 col-md-3 col-sm-4 sidebar">
+						<!--推荐文章-->
+						<include file="./template/web/tuijian.html"/>
+						<!-- 点击排行 -->
+						<include file="./template/web/clicks.html"/>
+						<!--热搜标签-->
+						<include file="./template/web/hot_tag.html"/>
+					</div>
+					
+
+				</div>
+				
+			</section>
+			<!-- /Section -->
+		
+		</section>
+
+		<!--Footer-->
+		<include file="./template/web/footer.html"/>
+		<!--Footer end-->
+
+	</body>
+
+</html>

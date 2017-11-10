@@ -1,0 +1,89 @@
+<include file="./template/mobile/header.html"/>
+<div class="perspective_container"><!--the "moving to the left" content box-->
+    <div class="wrapper"><!-- wrapper needed for scroll -->
+        <div class="header-clear"><i class="fa fa-times"></i></div>
+        <div class="slider-container full-bottom">
+            <div class="homepage-slider" data-snap-ignore="true">
+
+            </div>
+        </div>
+        <!--轮播图结束-->
+
+        <!---->
+        <div class="content">
+            <h4 class="breadcrumb"><a href="{{__ROOT__}}" style="color: #e74c3c;">首页</a> / <a href="">{{$hdData['catname']}}</a>/{{$hdData['title']}}</h4>
+            <div class="thumb-clear"></div>
+            <h2 class="title"><a href="{{$hdData['url']}}">{{$hdData['title']}}</a></h2>
+            <p class="arcInfo">
+                <span>作者：{{$hdData['author']}}</span>
+                <span><i class="icons icon-clock"></i>{{$hdData['created_at']}}</span>
+                <span><i class="icons icon-eye"></i>{{$hdData['click']}}</span>
+            </p>
+            <div class="mobile-content">
+                {{$hdData['content']}}
+            </div>
+            <div class="thumb-clear"></div>
+        </div>
+        <!--文章列表-->
+
+        <!--上一篇、下一篇-->
+        <div class="pages">
+            <p>上一篇：&nbsp;<prev/></p>
+            <p>下一篇：&nbsp;<next/></p>
+        </div>
+
+
+        <div id="SOHUCS" sid="{{__URL__}}"></div>
+        <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+        <script type="text/javascript">
+            window.changyan.api.config({
+                appid: 'cyt8zjbQz',
+                conf: 'prod_6245fd8903d495b377e8cd4beac2c185'
+            });
+        </script>
+        <div class="content-strip">
+            <h4>扫码关注我</h4>
+            <p>打开微信扫一扫，更多精彩内容等你来</p>
+            <i class="fa fa-user"></i>
+            <div class="overlay"></div>
+            <img src="{{__TEMPLATE__}}/images/6w.jpg" alt="img">
+        </div>
+
+        <div class="content">
+            <div class="container">
+                <div class="one-half-responsive">
+                    <!--微信图片-->
+                    <img src="{{__TEMPLATE__}}/images/wechat.jpg" alt="img" class="responsive-image">
+                    <h3 class="center-if-mobile">微信公众号：gaines0804</h3>
+                    <em class="center-if-mobile small-text">Gaines是一个稳健的码农</em>
+                </div>
+
+                <div class="decoration"></div>
+                <!--个人名片-->
+                <div class="one-half-responsive last-column">
+                    <h3 style="text-align: center;color: #999">个人名片</h3>
+                    <p>网名：Gaines</p>
+                    <p>真实姓名：杨利超</p>
+                    <p>性别：boy</p>
+                    <p>职业：Web前端、微信、PHP开发</p>
+                    <p>电话：15687373046</p>
+                    <p>Email：862574133@qq.com</p>
+                </div>
+            </div>
+            <div class="decoration"></div>
+        </div>
+
+        <div class="footer-section">
+            <p class="footer-text">
+                Copyright 2017 by <a href="{{__ROOT__}}">Gaines</a><br>
+                {{v('config.icp')}}
+            </p>
+        </div>
+
+    </div><!-- wrapper -->
+</div><!-- /perspective container -->
+</div><!-- /perspective -->
+</div>
+<script type="text/javascript" src="{{__TEMPLATE__}}/js/menu.js"></script>
+</body>
+</html>

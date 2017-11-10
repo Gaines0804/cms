@@ -1,0 +1,44 @@
+<include file="./template/web/header.html"/>
+<link rel="stylesheet" type="text/css" href="{{__TEMPLATE__}}/css/list_article.css"/>
+ 	
+		<img src="{{__TEMPLATE__}}/images/20160722165047_65119.jpg" style="display: block;margin: 0 auto;"/>
+		
+		<!--大区域-->
+		<div class="main">
+			<!--左侧-->
+			<div class="left">
+				<!--面包屑导航-->
+				<p class="position">
+					<span>当前位置：</span>
+					<a href="{{__ROOT__}}">首页</a>
+					»
+					<a href="">{{$model['catname']}}</a>
+				</p>
+				
+				<ul>
+					<arc>
+					<li>
+						<a href="{{$field['url']}}" class="title">{{$field['title']}}</a>
+						<span class="time">{{$field['created_at']}}</span>
+						<p class="desc">{{$field['description']}}</p>
+					</li>
+					</arc>
+				</ul>
+				<!--分页-->
+
+				<!--分页结束-->
+			</div>
+			<!--左侧结束-->
+
+
+			<!--右侧栏目-->
+			<include file="./template/web/right_category.html"/>
+			<!--右侧栏目结束-->
+
+
+		</div>
+		<!--大区域结束-->
+
+<!--底部内容-->
+<include file="./template/web/footer.html"/>
+<!--底部内容结束-->

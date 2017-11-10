@@ -1,0 +1,169 @@
+<include file="./template/web/header.html"/>
+
+		<!--轮播图-->
+		<!--注意：直接向下面的div中遍历输出a标签即可，小圆点会根据a标签的数量自动创建，边界条件会自动判断。-->
+		<div id="flash">
+			<slide>
+				<a href="{{$field['url']}}"><img src="{{$field['thumb']}}" style="width: 960px;height: 400px"/></a>
+			</slide>
+			<ul></ul>
+		</div>
+		<!--轮播图结束-->
+		
+		<!--大区域-->
+		<div class="main">
+			<div class="left">
+				<h3>快速入口</h3>
+				<dl>
+					<!--显示栏目-->
+					<category cid="1">
+						<dt><a href="/c_{{$field['cid']}}.html">{{$field['catname']}}</a></dt>
+					</category>
+					<!--显示父级栏目下面的数据-->
+					<category pid="1">
+    					<dd><a href="/c_{{$field['cid']}}.html">{{$field['catname']}}</a></dd>
+					</category>
+				</dl>
+
+				<dl>
+					<!--显示栏目-->
+					<category cid="2">
+						<dt><a href="/c_{{$field['cid']}}.html">{{$field['catname']}}</a></dt>
+					</category>
+					<!--显示父级栏目下面的数据-->
+					<category pid="2">
+						<dd><a href="/c_{{$field['cid']}}.html">{{$field['catname']}}</a></dd>
+					</category>
+				</dl>
+
+				<dl>
+					<!--显示栏目-->
+					<category cid="3">
+						<dt><a href="/c_{{$field['cid']}}.html">{{$field['catname']}}</a></dt>
+					</category>
+					<!--显示父级栏目下面的数据-->
+					<category pid="3">
+						<dd><a href="/c_{{$field['cid']}}.html">{{$field['catname']}}</a></dd>
+					</category>
+				</dl>
+
+			</div>
+			
+			<!--右侧-->
+			<div class="right">
+				<!--标题-->
+				<div class="title">
+					<p>
+						<category cid="1">
+							<span>{{$field['catname']}}</span>
+						</category>
+						<img src="{{__TEMPLATE__}}/images/sd02.jpg" />
+					</p>
+					<category cid="1">
+						<a href="{{$field['url']}}"><img src="{{__TEMPLATE__}}/images/more01.gif"/></a>
+					</category>
+				</div>
+				<!--标题结束-->
+				<!--产品列表-->
+				<ul class="product_list">
+					<arc cid="1">
+						<li>
+							<a href="{{$field['url']}}" class="pic"><img src="{{$field['thumb']}}" /></a>
+							<a href="{{$field['url']}}" class="product_title">{{$field['title']}}</a>
+						  	<p>{{mb_substr($field['description'],0,50,'utf-8')}}......</p>
+						</li>
+					</arc>
+				</ul>
+				<!--产品列表结束-->
+
+
+
+				<!--标题-->
+				<div class="title">
+					<p>
+						<category cid="2">
+							<span>{{$field['catname']}}</span>
+						</category>
+						<img src="{{__TEMPLATE__}}/images/sd02.jpg" />
+					</p>
+					<category cid="2">
+						<a href="{{$field['url']}}"><img src="{{__TEMPLATE__}}/images/more01.gif"/></a>
+					</category>
+				</div>
+				<!--标题结束-->
+				<!--产品列表-->
+				<ul class="product_list">
+					<arc cid="2">
+						<li>
+							<a href="{{$field['url']}}" class="pic"><img src="{{$field['thumb']}}" /></a>
+							<a href="{{$field['url']}}" class="product_title">{{$field['title']}}</a>
+							<p>{{mb_substr($field['description'],0,50,'utf-8')}}......</p>
+						</li>
+					</arc>
+				</ul>
+				<!--产品列表结束-->
+
+				<!--标题-->
+				<div class="title">
+					<p>
+						<category cid="6">
+							<span>{{$field['catname']}}</span>
+						</category>
+						<img src="{{__TEMPLATE__}}/images/sd02.jpg" />
+					</p>
+					<category cid="6">
+						<a href="{{$field['url']}}"><img src="{{__TEMPLATE__}}/images/more01.gif"/></a>
+					</category>
+				</div>
+				<!--标题结束-->
+				<!--产品列表-->
+				<ul class="product_list">
+					<arc cid="6">
+						<li>
+							<a href="{{$field['url']}}" class="pic"><img src="{{$field['thumb']}}" /></a>
+							<a href="{{$field['url']}}" class="product_title">{{$field['title']}}</a>
+							<p>{{mb_substr($field['description'],0,50,'utf-8')}}......</p>
+						</li>
+					</arc>
+				</ul>
+				<!--产品列表结束-->
+
+			</div>
+			<!--右侧结束-->
+		</div>
+		<!--大区域结束-->
+		
+		<!--车间-->
+		<!--这个轮播图非常聪明，只需要向ul里遍历li数据即可。其他的事情js帮你搞定-->
+		<div id="factory">
+			<div class="line"></div>
+			<img src="{{__TEMPLATE__}}/images/sltil.jpg" class="title" />
+			<img src="{{__TEMPLATE__}}/images/ico_l01.jpg" class="icon1" />
+			<img src="{{__TEMPLATE__}}/images/ico_r01.jpg" class="icon2" />
+			<div class="center">
+				<ul>
+					<arc>
+					<li>
+						<img src="{{$field['thumb']}}" />
+						<a href="{{$field['url']}}">{{$field['title']}}</a>
+					</li>
+					</arc>
+				</ul>
+			</div>
+		</div>
+		<!--车间结束-->
+		<img src="{{__TEMPLATE__}}/images/ge02.jpg" id="shadow" />
+		
+		<!--友情链接-->
+
+		<p id="link">友情链接</p>
+		<div id="webs">
+			<tag action="links.lists" rows="5">
+				<a href="{{$field['url']}}" target="_blank">{{$field['lname']}}</a>
+			</tag>
+		</div>
+		<!--友情链接结束-->
+<!--底部内容-->
+<include file="./template/web/footer.html"/>
+<!--底部内容结束-->
+

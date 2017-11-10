@@ -1,0 +1,102 @@
+<include file="./template/web/header.html"/>
+<link rel="stylesheet" type="text/css" href="{{__TEMPLATE__}}/css/list_default.css"/>
+
+		<img src="{{__TEMPLATE__}}/images/20160722165047_65119.jpg" style="display: block;margin: 0 auto;"/>
+		
+		<!--大区域-->
+		<div class="main">
+			<!--左侧-->
+			<div class="left">
+				<!--面包屑导航-->
+				<p class="position">
+					<span>当前位置：</span>
+					<a href="{{__ROOT__}}">首页</a>
+					»
+					<span>{{$model['catname']}}</span>
+				</p>
+				<!--推荐信息-->
+			<!--这个轮播图非常聪明，只需要向ul里遍历li数据即可。其他的事情js帮你搞定-->
+				<div id="factory">
+					<div class="line"></div>
+					<img src="{{__TEMPLATE__}}/images/tuijian.jpg" class="title" />
+					<img src="{{__TEMPLATE__}}/images/ico_l01.jpg" class="icon1" />
+					<img src="{{__TEMPLATE__}}/images/ico_r01.jpg" class="icon2" />
+					<div class="center">
+						<ul>
+							<!--轮播图部分-->
+						<arc rows="6">
+							<li>
+								<a href="{{$field['url']}}" title="{{$field['title']}}"><img src="{{$field['thumb']}}" width="200" height="150"/></a>
+								<a href="{{$field['url']}}" title="{{$field['title']}}">{{mb_substr($field['title'],0,15,'utf-8')}}...</a>
+							</li>
+						</arc>
+					</ul>
+					</div>
+				</div>
+				<img src="{{__TEMPLATE__}}/images/ge02.jpg" id="shadow" />
+					<!--推荐信息结束-->
+
+				<div class="box">
+					<h2>{{$model['catname']}}</h2>
+					<ul>
+						<arc from="0" rows="3">
+							<li>
+								<a href="{{$field['url']}}">{{mb_substr($field['title'],0,25,'utf-8')}}</a>
+								<span class="time">{{mb_substr($field['created_at'],0,10)}}</span>
+							</li>
+						</arc>
+					</ul>
+				</div>
+
+				<div class="box">
+					<h2>{{$model['catname']}}</h2>
+					<ul>
+						<arc from="3" rows="3">
+							<li>
+								<a href="{{$field['url']}}">{{mb_substr($field['title'],0,25,'utf-8')}}</a>
+								<span class="time">{{mb_substr($field['created_at'],0,10)}}</span>
+							</li>
+						</arc>
+					</ul>
+				</div>
+
+				<div class="box">
+					<h2>{{$model['catname']}}</h2>
+					<ul>
+						<arc from="5" rows="3">
+							<li>
+								<a href="{{$field['url']}}">{{mb_substr($field['title'],0,25,'utf-8')}}</a>
+								<span class="time">{{mb_substr($field['created_at'],0,10)}}</span>
+							</li>
+						</arc>
+					</ul>
+				</div>
+
+
+				<div class="box">
+					<h2>{{$model['catname']}}</h2>
+					<ul>
+						<arc from="8" rows="3">
+							<li>
+								<a href="{{$field['url']}}">{{mb_substr($field['title'],0,25,'utf-8')}}</a>
+								<span class="time">{{mb_substr($field['created_at'],0,10)}}</span>
+							</li>
+						</arc>
+					</ul>
+				</div>
+			
+			</div>
+			<!--左侧结束-->
+
+
+			<!--右侧栏目-->
+			<include file="./template/web/right_category.html"/>
+			<!--右侧栏目结束-->
+
+
+		</div>
+		<!--大区域结束-->
+
+<!--底部内容-->
+<include file="./template/web/footer.html"/>
+<!--底部内容结束-->

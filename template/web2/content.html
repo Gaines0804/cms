@@ -1,0 +1,67 @@
+<include file="./template/web/header.html"/>
+<div id="mainbody">
+  <div class="blogs">
+    <div id="index_view">
+      <h2 class="t_nav"><a href="{{__ROOT__}}">网站首页</a><a href="c_{{$hdData['category_cid']}}.html">{{$hdData['catname']}}</a></h2>
+      <h1 class="c_titile">{{$hdData['title']}}</h1>
+      <p class="box">发布时间：{{substr($field['created_at'],0,10)}}<span>编辑：{{$hdData['author']}}</span>阅读（{{$hdData['click']}}）</p>
+      <ul>
+        {{$hdData['content']}}
+      </ul>
+      <!--<div class="share"> -->
+        <!--&lt;!&ndash; Baidu Button BEGIN &ndash;&gt;-->
+        <!--<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <span class="bds_more">分享到：</span> <a class="bds_qzone"></a> <a class="bds_tsina"></a> <a class="bds_tqq"></a> <a class="bds_renren"></a> <a class="bds_t163"></a> <a class="shareCount"></a> </div>-->
+        <!--<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6574585" ></script> -->
+        <!--<script type="text/javascript" id="bdshell_js"></script> -->
+        <!--<script type="text/javascript">-->
+<!--document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)-->
+<!--</script> -->
+        <!--&lt;!&ndash; Baidu Button END &ndash;&gt; -->
+      <!--</div>-->
+      <div class="otherlink">
+        <h2>
+          <span style="color: #666;">上一篇：<prev/></span>
+          <span style="float: right;color: #666;">下一篇：<next/></span>
+        </h2>
+      </div>
+    </div>
+    <!--bloglist end-->
+    <aside>
+      <!--searchform-->
+      <include file="./template/web/searchform.html"/>
+      <!--searchform end-->
+      <!--right_nav-->
+      <include file="./template/web/right_nav.html"/>
+      <!--right_nav end-->
+      <div class="tuijian">
+        <h2>栏目更新</h2>
+        <ol>
+          <li><span><strong>1</strong></span><a href="{{__TEMPLATE__}}//">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+
+        </ol>
+      </div>
+      <!--<div class="toppic">-->
+        <!--<h2>图文并茂</h2>-->
+        <!--<ul>-->
+          <!--<li><a href="{{__TEMPLATE__}}//"><img src="{{__TEMPLATE__}}/images/k01.jpg">腐女不可怕，就怕腐女会画画！-->
+            <!--<p>伤不起</p>-->
+            <!--</a></li>-->
+          <!--<li><a href="{{__TEMPLATE__}}//"><img src="{{__TEMPLATE__}}/images/k02.jpg">问前任，你还爱我吗？无限戳中泪点~-->
+            <!--<p>感兴趣</p>-->
+            <!--</a></li>-->
+          <!--<li><a href="{{__TEMPLATE__}}//"><img src="{{__TEMPLATE__}}/images/k03.jpg">世上所谓幸福，就是一个笨蛋遇到一个傻瓜。-->
+            <!--<p>喜欢</p>-->
+            <!--</a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+      <!--hot clicks-->
+      <include file="./template/web/hot_click.html"/>
+      <!--hot clicks end-->
+    </aside>
+  </div>
+  <!--blogs end-->
+</div>
+<!--mainbody end-->
+<!--footer start-->
+<include file="./template/web/footer.html"/>
+<!--footer end-->

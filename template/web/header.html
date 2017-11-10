@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Gaines'blog</title>
+
+
+    <!-- Stylesheets -->
+    <link href="{{__TEMPLATE__}}/css/bootstrap.min_1.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/fontello_1.css" rel="stylesheet" type="text/css">
+
+
+    <link href="{{__TEMPLATE__}}/css/flexslider_1.css" rel="stylesheet" type="text/css">
+    <link href="{{__TEMPLATE__}}/css/settings_1.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{{__TEMPLATE__}}/css/owl.carousel_1.css" rel="stylesheet" type="text/css">
+
+    <link href="{{__TEMPLATE__}}/css/chosen_1.css" rel="stylesheet" type="text/css">
+    <!--<link href="{{__TEMPLATE__}}/css/jackbox.min_1.css" rel="stylesheet" type="text/css"/>-->
+    <link href="{{__TEMPLATE__}}/css/cloud-zoom_1.css" rel="stylesheet" type="text/css"/>
+    <link href="{{__TEMPLATE__}}/css/style_1.css" rel="stylesheet" type="text/css">
+
+
+
+
+    <style type="text/css">
+        .no-fouc {
+            display: none;
+        }
+    </style>
+
+    <!-- jQuery -->
+    <script src="{{__ROOT__}}/node_modules/hdjs/js/jquery.min.js"  ></script>
+    <script src="{{__ROOT__}}/node_modules/hdjs/js/jquery-ui.min.js"  ></script>
+
+    <!-- Preloader -->
+    <script src="{{__TEMPLATE__}}/js/jquery.queryloader2.min_1.js"  ></script>
+
+
+
+</head>
+<!--<script type="text/javascript">var cpro_id = "u837382";</script>-->
+<!--<script src="{{__TEMPLATE__}}/js/f_1.js" type="text/javascript"></script>-->
+<body class="sticky-header-on tablet-sticky-header">
+
+<div class="container">
+
+
+    <!-- Header -->
+    <header id="header" >
+        <!-- Main Header -->
+        <div id="main-header">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <!-- Logo -->
+                    <div id="logo" class="col-lg-3 col-md-3 col-sm-3">
+
+                        <a href="{{__ROOT__}}"><img src="{{__TEMPLATE__}}/picture/logo_1.png" alt="Logo"></a>
+
+                    </div>
+                    <!-- /Logo -->
+
+
+                    <!-- Main Quote -->
+                    <div class="col-lg-3 col-md-4 col-sm-4">
+
+                        <blockquote>既来之，则安之<br>敬人之, 人敬之...</blockquote>
+
+                    </div>
+                    <!-- /Main Quote -->
+
+
+                    <!-- Search -->
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+
+                        <form id="search" action="" method="get">
+
+
+                            <div class="search-form">
+                                <div class="search-text">
+                                    <input type="hidden" name="m" value="search">
+                                    <input type="hidden" name="a" value="controller/entry/search">
+                                    <input style="margin-top: 0px" type="text" name="keywords" placeholder="Search...">
+                                    <div class="search-submit">
+                                        <input type="submit" value="" style="border: none;">
+                                        <i class="icons icon-search"></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <h5>
+                                <span>热搜关键词：</span>
+                                <tag action="search.keywords" rows="5">
+                                    <a href="?m=search&a=controller/entry/search&keywords={{$field['keywords']}}" class="hotKeywords" >{{$field['keywords']}}</a>
+                                </tag>
+                            </h5>
+
+                        </form>
+
+                    </div>
+                    <!-- /Search -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /Main Header -->
+
+
+        <!-- Lower Header -->
+        <div id="lower-header">
+
+            <div class="container">
+
+
+
+                <ul id="navigation">
+
+                    <!-- Home -->
+                    <li class="home-button current-menu-item">
+
+                        <a href="{{__ROOT__}}"><i class="icons icon-home"></i></a>
+
+                    </li>
+                    <!-- /Home -->
+
+
+                    <!--navigation-->
+                    <category pid="0" rows="6">
+                    <li>
+                        <span>{{$field['catname']}}</span>
+                        <ul>
+                            <category pid="{$field['cid']}">
+                                <li><a href="{{$field['url']}}">{{$field['catname']}}</a></li>
+                            </category>
+                        </ul>
+                    </li>
+                    </category>
+                    <!--navigation-->
+
+                    <li style="width: 30%;">
+
+                    </li>
+
+                    <!-- Donate -->
+                    <!--<li class="donate-button " style="background: none">-->
+                        <!--<a href="#">weqewqewqeq</a>-->
+                    <!--</li>-->
+                    <!-- /Donate -->
+
+                </ul>
+
+            </div>
+
+        </div>
+        <!-- /Lower Header -->
+
+    </header>
+    <!-- /Header -->

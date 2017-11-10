@@ -1,0 +1,9 @@
+{
+    "csrf_token": "",
+    "name": "links",
+    "title": "友情链接",
+    "resume": "友情链接",
+    "sql": "create table links(\r\n\tlid tinyint primary key auto_increment,\r\n\tlname varchar(100) not null,\r\n\turl char(255) not null,\r\n\torderby tinyint not null default 0\r\n)",
+    "author": "hd",
+    "preview": "attachment/2017/07/25/39171500963068.jpg"
+}

@@ -1,0 +1,118 @@
+﻿<include file="./template/web/header.html"/>
+
+<section id="content">
+
+    <!-- Page Heading -->
+    <section class="section page-heading animate-onscroll">
+
+        <h1>{{$model['catname']}}</h1>
+        <p class="breadcrumb"><a href="{{__ROOT__}}">首页</a> / {{$model['catname']}}</p>
+
+    </section>
+    <!-- Page Heading -->
+
+
+    <!-- Section -->
+    <section class="section full-width-bg gray-bg">
+
+        <div class="row">
+
+            <div class="col-lg-9 col-md-9 col-sm-8 col-lg-push-3 col-md-push-3 col-sm-push-4">
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                        <!-- Blog Post -->
+                        <arc rows="6">
+                        <div class="blog-post style2 animate-onscroll">
+                            <!--图片-->
+                            <div class="post-image">
+                                <img src="{{$field['thumb']}}" alt="">
+                                <div class="media-hover">
+                                    <div class="media-icons">
+                                        <a href="{{$field['url']}}" class="media-icon"><i
+                                                class="icons icon-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--内容-->
+                            <div class="post-content">
+
+                                <div class="post-header">
+                                    <h2><a href="{{$field['url']}}">{{$field['title']}}</a></h2>
+                                    <div class="post-meta">
+                                        <span>作者：{{$field['author']}}</span>
+                                        <span><i class="icons icon-clock"></i>{{$field['created_at']}}</span>
+                                        <span><i class="icons icon-eye"></i>{{$field['click']}}</span>
+                                    </div>
+                                </div>
+                                <!--文章内容-->
+                                <div class="post-exceprt">
+
+                                    <p>{{$field['description']}}</p>
+                                    <a href="{{$field['url']}}" class="button read-more-button big button-arrow">阅读更多</a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        </arc>
+                        <!-- /Blog Post -->
+                        <style>
+                            .page .pagination{
+                                margin: 0 auto;
+                            }
+                        </style>
+                        <div class="page">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="animate-onscroll">-->
+
+                    <!--<div class="divider"></div>-->
+
+                    <!--<div class="numeric-pagination">-->
+                        <!--<a href="#" class="button"><i class="icons icon-left-dir"></i></a>-->
+                        <!--<a href="#" class="button">1</a>-->
+                        <!--<a href="#" class="button active-button">2</a>-->
+                        <!--<a href="#" class="button">3</a>-->
+                        <!--<a href="#" class="button"><i class="icons icon-right-dir"></i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            </div>
+
+
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-3 col-sm-4 col-lg-pull-9 col-md-pull-9 col-sm-pull-8 sidebar">
+                <!--随机文章-->
+                <include file="./template/web/tuijian.html"/>
+                <br>
+                <br>
+                <!--点击排行-->
+                <include file="./template/web/clicks.html"/>
+
+                <!--热搜标签-->
+                <include file="./template/web/hot_tag.html"/>
+
+            </div>
+            <!-- /Sidebar -->
+
+        </div>
+
+    </section>
+    <!-- /Section -->
+
+</section>
+
+<!--Footer-->
+<include file="./template/web/footer.html"/>
+<!--Footer end-->
+
+</body>
+
+</html>

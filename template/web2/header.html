@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{v('config.webname')}}</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="{{__TEMPLATE__}}/css/index.css" rel="stylesheet" />
+    <link href="{{__TEMPLATE__}}/css/styles.css" rel="stylesheet">
+    <link href="{{__TEMPLATE__}}/css/view.css" rel="stylesheet">
+    <link href="{{__TEMPLATE__}}/css/animation.css" rel="stylesheet">
+    <!-- 返回顶部调用 begin -->
+    <link href="{{__TEMPLATE__}}/css/lrtk.css" rel="stylesheet" />
+    <script type="text/javascript" src="{{__TEMPLATE__}}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{__TEMPLATE__}}/js/js.js"></script>
+    <script src="{{__TEMPLATE__}}/js/index.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 返回顶部调用 end-->
+    <!--[if lt IE 9]>
+    <script src="{{__TEMPLATE__}}/js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="{{__ROOT__}}" >网站首页</a></li>
+            <category pid="0">
+                <li><a href="/c_{{$field['cid']}}.html" target="_blank"  <if value="$field['cid'] == Request::get('cid')">class="cur"</if>>{{$field['catname']}}</a></li>
+            </category>
+        </ul>
+        <script src="{{__TEMPLATE__}}/js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+    </nav>
+</header>

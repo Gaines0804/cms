@@ -1,0 +1,49 @@
+<div class="owl-carousel-container">
+
+    <div class="owl-header">
+
+        <h3 class="">其他文章</h3>
+
+        <div class="carousel-arrows ">
+            <span class="left-arrow"><i class="icons icon-left-dir"></i></span>
+            <span class="right-arrow"><i class="icons icon-right-dir"></i></span>
+        </div>
+
+    </div>
+
+    <div class="owl-carousel" data-max-items="3">
+
+        <!-- Owl Item -->
+        <arc from="7" rows="15">
+            <div>
+
+
+                <!-- Blog Post -->
+                <div class="blog-post ">
+
+                    <div class="post-image">
+                        <img src="{{$field['thumb']}}" alt="">
+                    </div>
+
+                    <h4 class="post-title"><a href="{{$field['url']}}">{{$field['title']}}</a></h4>
+
+                    <div class="post-meta">
+                        <span>作者：{{$field['author']}}</span>
+                        <span><i class="icons icon-clock"></i>{{substr($field['created_at'],0,10)}}</span>
+                        <span><i class="icons icon-eye"></i>{{$field['click']}}</span>
+                    </div>
+
+                    <p>{{mb_substr($field['description'],0,52,'utf8')}}.....</p>
+
+                    <a href="{{$field['url']}}" class="button read-more-button big button-arrow">阅读更多</a>
+
+                </div>
+                <!-- /Blog Post -->
+
+
+            </div>
+        </arc>
+        <!-- /Owl Item -->
+    </div>
+
+</div>

@@ -1,0 +1,40 @@
+<include file="./template/web/header.html"/>
+<link rel="stylesheet" type="text/css" href="{{__TEMPLATE__}}/css/page.css"/>
+	
+		<img src="{{__TEMPLATE__}}/images/20160722165047_65119.jpg" style="display: block;margin: 0 auto;"/>
+		
+		<!--大区域-->
+		<div class="main">
+			<!--左侧-->
+			<div class="left">
+				<!--面包屑导航-->
+				<p class="position">
+					<span>当前位置：</span>
+					<a href="{{__ROOT__}}">首页</a>
+					»
+					<a href="c_{{$hdData['category_cid']}}.html">{{$hdData['catname']}}</a>
+					»
+					<span>{{$hdData['title']}}</span>
+				</p>
+				
+				<h1>{{$hdData['title']}}</h1>
+				<p class="info">文章出处：{{$hdData['source']}}&nbsp;&nbsp;&nbsp;&nbsp;点击量：{{$hdData['click']}}</p>
+				<div class="content">{{$hdData['content']}}</div>
+				<!--上一篇下一篇-->
+				<div class="np">
+					<p class="n">上一篇：<prev/></p>
+					<p class="p">下一篇：<next/></p>
+				</div>
+			</div>
+			<!--左侧结束-->
+
+			<!--右侧栏目-->
+			<include file="./template/web/right_category.html"/>
+			<!--右侧栏目结束-->
+
+		</div>
+		<!--大区域结束-->
+
+<!--底部内容-->
+<include file="./template/web/footer.html"/>
+<!--底部内容结束-->

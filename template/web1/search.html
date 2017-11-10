@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><include file="./template/web/header.html"/>
+        <link rel="stylesheet" type="text/css" href="{{__TEMPLATE__}}/css/list_article.css"/>
+
+
+        <img src="{{__TEMPLATE__}}/images/20160722165047_65119.jpg" style="display: block;margin: 0 auto;"/>
+
+        <!--大区域-->
+        <div class="main">
+            <!--左侧-->
+            <div class="left">
+                <!--面包屑导航-->
+                <p class="position">
+                    <span>当前位置：</span>
+                    <a href="/index.html">首页</a>
+                    »
+                    <a href="#">搜索</a>
+                </p>
+                <ul>
+                    <if value="$arcData">
+                        <foreach from="$arcData" value="$field">
+                            <li>
+                                <a href="/a_{{$field['aid']}}.html" class="title">{{str_replace($keywords,"<span style='color: red'>{$keywords}</span>",$field['title'])}}</a>
+                                <span class="time">[ {{$field['created_at']}} ]</span>
+                                <p class="desc">{{$field['description']}}</p>
+                            </li>
+                        </foreach>
+                        <else/>
+                        <li>没有文章，请更换关键词重新搜索</li>
+                    </if>
+
+                </ul>
+                <!--分页-->
+                <style>
+                    div.pagelist nav ul.pagination li {
+                        width: 60px;
+                        float: left;
+                        text-align: center;
+                    }
+                </style>
+                <div class="pagelist">
+                    {{$arcModel->links()}}
+                </div>
+                <!--分页结束-->
+            </div>
+            <!--左侧结束-->
+
+
+            <!--右侧栏目-->
+            <include file="./template/web/right_category.html"/>
+            <!--右侧栏目结束-->
+
+
+        </div>
+        <!--大区域结束-->
+
+        <!--底部内容-->
+        <include file="./template/web/footer.html"/>
+        <!--底部内容结束-->
